@@ -6,7 +6,7 @@
 
 کامند پایین کپی و داخل سرور اجرا کنین (میتونین تو سروری که هر پنلی یا رباتی روشه نصب کنین) 
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/amirreza7746/xssh/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/cli007/ami/main/install.sh)
 ```
 ازتون آیدی عددی ادمین می پرسه میتونین از این ربات بگیرین
 

@@ -67,12 +67,12 @@ sellers_id_add_list()
 
 def Admin_Tools_keys():
     keyboard = [
-        [InlineKeyboardButton("✔️چکر", callback_data='checker'), InlineKeyboardButton("📊آمار", callback_data='stats')],
-        [InlineKeyboardButton("🖥 مدیریت سرور ها", callback_data='SMT')],
-        [InlineKeyboardButton("👤مدیریت اکانت ها", callback_data='Manager')],
-        [InlineKeyboardButton("⛔️تست فیلترینگ", callback_data='Filtering'), InlineKeyboardButton("🎁کد هدیه", callback_data='GUA')],
-        [InlineKeyboardButton("📦ارسال پیام همگانی", callback_data='message'), InlineKeyboardButton("💲فروشنده ها", callback_data='sellers')],
-        [InlineKeyboardButton("⚙️تنظیمات", callback_data='settings')]
+        [InlineKeyboardButton("چکر 🌀", callback_data='checker'), InlineKeyboardButton("آمار 👁", callback_data='stats')],
+        [InlineKeyboardButton("مدیریت سرور ها 🚀", callback_data='SMT')],
+        [InlineKeyboardButton("مدیریت اکانت ها 🥷🏻", callback_data='Manager')],
+        [InlineKeyboardButton("تست فیلترینگ 🚫", callback_data='Filtering'), InlineKeyboardButton("کد هدیه 🎁", callback_data='GUA')],
+        [InlineKeyboardButton("ارسال پیام همگانی 💬", callback_data='message'), InlineKeyboardButton("فروشنده ها 🤝", callback_data='sellers')],
+        [InlineKeyboardButton("تنظیمات 🛠", callback_data='settings')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     return reply_markup
@@ -80,7 +80,7 @@ def Admin_Tools_keys():
 
 def Seller_Tools_keys():
     keyboard = [
-        [InlineKeyboardButton("📊آمار", callback_data='stats'), InlineKeyboardButton("👤اطلاعات کاربر", callback_data='userinfo')],
+        [InlineKeyboardButton("آمار 👁", callback_data='stats'), InlineKeyboardButton("👤اطلاعات کاربر", callback_data='userinfo')],
         [InlineKeyboardButton("✖️ غیر فعال کاربر", callback_data='disable'), InlineKeyboardButton("✔️ فعال کاربر", callback_data='enable')],
         [InlineKeyboardButton("🔄تمدید کاربر", callback_data='update'), InlineKeyboardButton("⬆️افزایش ترافیک", callback_data='TrfPlus')],
         [InlineKeyboardButton("🛠ساخت اکانت", callback_data='Create_none'), InlineKeyboardButton("🗑حذف کاربر", callback_data='remove')],
@@ -5946,7 +5946,7 @@ def call_idpay(bot, query):
         status = "🔴 OFF"
     else:
         status = "🟢 ON"
-    text = f"💳IDPay : <code>{settings['idpay_address']}</code>\n\nStatus: {status}\n\nبرای اضافه کردن درگاه زرین پال کافیه به سایت idpay.ir برید و یه درگاه شخصی بسازین و باید آدرس درگاه به ربات بفرستین مثلا آدرس شما این باشه:\nidpay.ir/name\n\n شما باید name بفرستین به ربات \nمتاسفانه این درگاه داخل ربات اتوماتیک نیست 💔"
+    text = f"☕️ Donate : <code>{settings['idpay_address']}</code>\n\nStatus: {status}\n\nبرای اضافه کردن درگاه دونیت کافیه به سایت coffeebede.com برید و یه درگاه شخصی بسازین و باید آدرس درگاه به ربات بفرستین مثلا آدرس شما این باشه:\ncoffeebede.com/name\n\n شما باید name بفرستین به ربات."
     query.edit_message_text(text=text, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML, disable_web_page_preview=True)
 
 
@@ -6088,7 +6088,7 @@ def call_plisio(bot, query):
         status = "🔴 OFF"
     else:
         status = "🟢 ON"
-    text = f"💳plisio API: <code>{settings['plisio_API']}</code>\n\nStatus: {status}\n\nدرگاه پرداخت plisio.net\nبرای فعال کردن این قابلیت باید به داخل سایت برید و یه API بگیرین آموزش گرفتنشم : \n\nt.me/deltacommentsgp"
+    text = f"💳plisio API: <code>{settings['plisio_API']}</code>\n\nStatus: {status}\n\nدرگاه پرداخت plisio.net\nبرای فعال کردن این قابلیت باید به داخل سایت برید و یه API بگیرین"
     query.edit_message_text(text=text, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML, disable_web_page_preview=True)
 
 
@@ -9219,18 +9219,18 @@ def call_SMT(bot, query):
     if check_cache(chat_id) is True:
         delete_cache(chat_id)
     keyboard = [
-        [InlineKeyboardButton("🔧 مانیتور و اطلاعات کامل یک سرور", callback_data='servers')],
-        [InlineKeyboardButton("⚫️ظرفیت سرورها", callback_data='full')],
+        [InlineKeyboardButton("مانیتور و اطلاعات کامل یک سرور 🔎", callback_data='servers')],
+        [InlineKeyboardButton("نمایش ظرفیت سرور ها 🛜", callback_data='full')],
         [InlineKeyboardButton("➖ حذف", callback_data='RST'), InlineKeyboardButton("➕ افزودن", callback_data='AST')],
-        [InlineKeyboardButton("تغییر پورت ssh", callback_data='XESSP'), InlineKeyboardButton("تغییر پورت udp", callback_data='UXEP')],
-        [InlineKeyboardButton("↪️پورت SSH کاستوم ", callback_data='JUQSTC'), InlineKeyboardButton("کپشن کاستوم ", callback_data='NVDSLK')],
-        [InlineKeyboardButton("🌐 IPv6", callback_data='ipv6'), InlineKeyboardButton("⚡️ Session", callback_data='VDNKHF')],
-        [InlineKeyboardButton("🏳️تغییر نام سرور ", callback_data='FSLJC'), InlineKeyboardButton("⚪️تغییر اولویت انتخاب سرور", callback_data='CGDJS')],
-        [InlineKeyboardButton("📂 آرشیو سرور ", callback_data='archive')],
-        [InlineKeyboardButton("🔄 تغییر دامین و یوزر و پسورد و پورت پنل", callback_data='TST')],
-        [InlineKeyboardButton("📩 ارسال پیام به کاربران خاص یک سرور", callback_data='MST')],
-        [InlineKeyboardButton("👥محدودیت تعداد کاربر در هر سرور", callback_data='maximum')],
-        [InlineKeyboardButton("👤محدودیت تعداد کاربر فقط یک سرور", callback_data='MCXV')]
+        [InlineKeyboardButton("تغییر پورت ssh ⚠️", callback_data='XESSP'), InlineKeyboardButton("تغییر پورت udp 🪅", callback_data='UXEP')],
+        [InlineKeyboardButton("پورت SSH کاستوم 📝 ", callback_data='JUQSTC'), InlineKeyboardButton("کپشن کاستوم 📝", callback_data='NVDSLK')],
+        [InlineKeyboardButton("دامین کاستوم 🌐", callback_data='ipv6'), InlineKeyboardButton("تست ارتباط با پنل ⚡️", callback_data='VDNKHF')],
+        [InlineKeyboardButton("تغییر نام سرور 🦋", callback_data='FSLJC'), InlineKeyboardButton("تغییر اولویت سرور ها 🔠", callback_data='CGDJS')],
+        [InlineKeyboardButton("آرشیو سرور 🔒", callback_data='archive')],
+        [InlineKeyboardButton("تغییر دامین و یوزر و پسورد و پورت پنل ♻️", callback_data='TST')],
+        [InlineKeyboardButton("ارسال پیام به کاربران خاص یک سرور 👁‍🗨", callback_data='MST')],
+        [InlineKeyboardButton("محدودیت تعداد کاربر در هر سرور 👥", callback_data='maximum')],
+        [InlineKeyboardButton("محدودیت تعداد کاربر فقط یک سرور 👤", callback_data='MCXV')]
     ]
     keyboard.append([InlineKeyboardButton("<<", callback_data='back_admin')])
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -12255,7 +12255,7 @@ def call_HOW(bot, query):
         query.answer("Access denied", show_alert=True)
         return
     keyboard = []
-    text = '<b>How to use?</b>\n\nبرای اینکه یه کاربر سریعتر مدیریت کنین کافیه کپی کانفیگی که داخل پنل زده بودین و به کاربر فرستادینو مستقیم به ربات بفرستین:\n\nSSH Host: domain\nUsername : username\n\n\nبرای درست کردن لیست قیمت کافیه دکمه قیمت ها رو بزنین\n\nکانال ربات :\n@delta_bcc\nگروه رفع باگ و سوالا:\n@deltacommentsgp'
+    text = '<b>How to use?</b>\n\nبرای اینکه یه کاربر سریعتر مدیریت کنین کافیه کپی کانفیگی که داخل پنل زده بودین و به کاربر فرستادینو مستقیم به ربات بفرستین:\n\nSSH Host: domain\nUsername : username\n\nبرای درست کردن لیست قیمت کافیه دکمه قیمت ها رو بزنین'
     keyboard.append([InlineKeyboardButton("<<", callback_data='settings')])
     reply_markup = InlineKeyboardMarkup(keyboard)
     query.edit_message_text(text=text, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)

@@ -39,7 +39,7 @@ mv /root/bot/data.json /root/
 
 rm -r /root/bot
 
-git clone "https://github.com/amirreza7746/xssh.git" /root/bot/
+git clone "https://github.com/cli007/ami.git" /root/bot/
 
 mv /root/botCh/Pannels.txt /root/bot
 mv /root/botCh/backup /root/bot

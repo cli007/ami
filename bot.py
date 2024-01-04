@@ -5961,7 +5961,7 @@ def call_ChIPay(bot, query):
     add_cache(chat_id, "change_idpay")
     keyboard = [[InlineKeyboardButton("<<", callback_data='idpay')]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    query.edit_message_text(text="آدرس درگاه به ربات بفرستین مثلا آدرس شما این باشه:\nidpay.ir/name\n\n شما باید name بفرستین به ربات ", reply_markup=reply_markup)
+    query.edit_message_text(text="آدرس درگاه به ربات بفرستین مثلا آدرس شما این باشه:\ncoffeebede.com/name\n\n شما باید name بفرستین به ربات ", reply_markup=reply_markup)
 
 
 @app.on_callback_query(filters.regex('OFI'))
@@ -8380,15 +8380,15 @@ def call_Manager(bot, query):
     if check_cache(chat_id) is True:
         delete_cache(chat_id)
     keyboard = [
-        [InlineKeyboardButton("✖️ غیر فعال کاربر", callback_data='disable'), InlineKeyboardButton("✔️ فعال کاربر", callback_data='enable')],
-        [InlineKeyboardButton("🔄تمدید کاربر ", callback_data='update'), InlineKeyboardButton("🗑حذف اکانت", callback_data='remove')],
-        [InlineKeyboardButton("👤اطلاعات اکانت", callback_data='userinfo'), InlineKeyboardButton("📄اکانت های کاربر", callback_data='userconfigs')],
-        [InlineKeyboardButton("🚻ریست ترافیک", callback_data='TrfRes'), InlineKeyboardButton("➕افزایش ترافیک", callback_data='TrfPlus')],
-        [InlineKeyboardButton("🔑تغییر پسورد اکانت", callback_data='ADPASS'), InlineKeyboardButton("👝موجودی کاربر", callback_data='ADUB')],
-        [InlineKeyboardButton("🛠ساخت اکانت یوزر تلگرام", callback_data='create'), InlineKeyboardButton("🛠ساخت اکانت", callback_data='Create_none')],
-        [InlineKeyboardButton("⚠️کاربران نزدیک اتمام", callback_data="CQLOSE"), InlineKeyboardButton("🔎 جستجو کاربر ", callback_data='search')],
-        [InlineKeyboardButton("🔴کاربران غیرفعال", callback_data="IQNAC"), InlineKeyboardButton("🟢کاربران آنلاین", callback_data="OQNLI")],
-        [InlineKeyboardButton("🌐 IP info", callback_data='IPINFO'), InlineKeyboardButton("💀Kill User", callback_data='AKill')]
+        [InlineKeyboardButton("غیر فعال کردن کاربر 🚫", callback_data='disable'), InlineKeyboardButton("فعال کردن کاربر ✅", callback_data='enable')],
+        [InlineKeyboardButton("تمدید کردن کاربر 🔄", callback_data='update'), InlineKeyboardButton("حذف اکانت ❌", callback_data='remove')],
+        [InlineKeyboardButton("اطلاعات اکانت 👤", callback_data='userinfo'), InlineKeyboardButton("اکانت های کاربر 👣", callback_data='userconfigs')],
+        [InlineKeyboardButton("ریسک ترافیک 🆕", callback_data='TrfRes'), InlineKeyboardButton("افزایش ترافیک ➕", callback_data='TrfPlus')],
+        [InlineKeyboardButton("تغییر پسورد اکانت 🔑", callback_data='ADPASS'), InlineKeyboardButton("موجودی کاربر 💰", callback_data='ADUB')],
+        [InlineKeyboardButton("ساخت اکانت یوزر تلگرام ⚒", callback_data='create'), InlineKeyboardButton("ساخت اکانت 🛠", callback_data='Create_none')],
+        [InlineKeyboardButton("کاربران نزدیک اتمام ⚠️", callback_data="CQLOSE"), InlineKeyboardButton("جستجو کاربر 🔎", callback_data='search')],
+        [InlineKeyboardButton("کاربران غیرفعال 🔴", callback_data="IQNAC"), InlineKeyboardButton("کاربران آنلاین 🟢", callback_data="OQNLI")],
+        [InlineKeyboardButton("IP info 👀", callback_data='IPINFO'), InlineKeyboardButton("Kill User 💀", callback_data='AKill')]
     ]
     keyboard.append([InlineKeyboardButton("<<", callback_data='back_admin')])
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -9222,7 +9222,7 @@ def call_SMT(bot, query):
         [InlineKeyboardButton("مانیتور و اطلاعات کامل یک سرور 🔎", callback_data='servers')],
         [InlineKeyboardButton("نمایش ظرفیت سرور ها 🛜", callback_data='full')],
         [InlineKeyboardButton("➖ حذف", callback_data='RST'), InlineKeyboardButton("➕ افزودن", callback_data='AST')],
-        [InlineKeyboardButton("تغییر پورت ssh ⚠️", callback_data='XESSP'), InlineKeyboardButton("تغییر پورت udp 🪅", callback_data='UXEP')],
+        [InlineKeyboardButton("تغییر پورت ssh ⚠️", callback_data='XESSP'), InlineKeyboardButton("تغییر پورت udp ❗️", callback_data='UXEP')],
         [InlineKeyboardButton("پورت SSH کاستوم 📝 ", callback_data='JUQSTC'), InlineKeyboardButton("کپشن کاستوم 📝", callback_data='NVDSLK')],
         [InlineKeyboardButton("دامین کاستوم 🌐", callback_data='ipv6'), InlineKeyboardButton("تست ارتباط با پنل ⚡️", callback_data='VDNKHF')],
         [InlineKeyboardButton("تغییر نام سرور 🦋", callback_data='FSLJC'), InlineKeyboardButton("تغییر اولویت سرور ها 🔠", callback_data='CGDJS')],
@@ -12268,16 +12268,16 @@ def call_settings(bot, query):
         query.answer("Access denied", show_alert=True)
         return
     keyboard = [
-        [InlineKeyboardButton("🛒تنظیمات خرید ", callback_data='ZBSHP'), InlineKeyboardButton("تنظیم دسترسی 🔐", callback_data='RWUAD')],
-        [InlineKeyboardButton("💲 تنظیمات فروشنده ها", callback_data='XSM'), InlineKeyboardButton("🔔اطلاع رسانی ", callback_data='NSCLS')],
-        [InlineKeyboardButton("📃پیام استارت", callback_data='WSMSG'), InlineKeyboardButton("🏷 پیام تعرفه قیمت", callback_data='WLMSG')],
-        [InlineKeyboardButton("❔ بخش آموزش کاربر", callback_data='Tutorials'), InlineKeyboardButton("📩 تنظیم پشتیبانی", callback_data='SID')],
-        [InlineKeyboardButton("🗑حذف خودکار کاربر", callback_data='AutoDelete'), InlineKeyboardButton("💲قیمت دلار", callback_data='USD')],
-        [InlineKeyboardButton("📢اسپانسر", callback_data='sponser'), InlineKeyboardButton("📡پروکسی", callback_data='Sprx')],
-        [InlineKeyboardButton("🌐چکر فیلترینگ", callback_data='FILCH'), InlineKeyboardButton("📥بکاپ", callback_data='Backup')],
-        [InlineKeyboardButton("🆘راهنما", callback_data='HOW'), InlineKeyboardButton("🎁دعوت کاربر", callback_data='INVS')],
-        [InlineKeyboardButton("🆓 اکانت تست ", callback_data='TASET'), InlineKeyboardButton("📞شماره تلفن", callback_data='PNS')],
-        [InlineKeyboardButton("ℹ️ چکر و اطلاع رسانی حجم و تاریخ به کاربر", callback_data='NUSYS')]
+        [InlineKeyboardButton("تنظیمات خرید 🛍", callback_data='ZBSHP'), InlineKeyboardButton("تنظیم دسترسی 🔰", callback_data='RWUAD')],
+        [InlineKeyboardButton("تنظیمات فروشنده 💸", callback_data='XSM'), InlineKeyboardButton("اطلاع رسانی 📢", callback_data='NSCLS')],
+        [InlineKeyboardButton("پیام استارت 💬", callback_data='WSMSG'), InlineKeyboardButton("پیام تعرفه قیمت 🧮", callback_data='WLMSG')],
+        [InlineKeyboardButton("بخش آموزش کاربر 🎬", callback_data='Tutorials'), InlineKeyboardButton("تنظیمات پشتیبانی 📞", callback_data='SID')],
+        [InlineKeyboardButton("حذف خودکار کاربر ❌", callback_data='AutoDelete'), InlineKeyboardButton("قیمت دلار 💲", callback_data='USD')],
+        [InlineKeyboardButton("اسپانسر ©️", callback_data='sponser'), InlineKeyboardButton("پروکسی تلگرام 🌐", callback_data='Sprx')],
+        [InlineKeyboardButton("چکر فیلترینگ ⛓", callback_data='FILCH'), InlineKeyboardButton("تنظیمات بکاپ 💿", callback_data='Backup')],
+        [InlineKeyboardButton("راهنما ✋🏻", callback_data='HOW'), InlineKeyboardButton("دعوت کاربر 🎉", callback_data='INVS')],
+        [InlineKeyboardButton("اکانت تست 🆓", callback_data='TASET'), InlineKeyboardButton("شماره تلفن 📲", callback_data='PNS')],
+        [InlineKeyboardButton("چکر و اطلاع رسانی حجم و تاریخ به کاربر 🚨", callback_data='NUSYS')]
     ]
     keyboard.append([InlineKeyboardButton("<<", callback_data='back_admin')])
     reply_markup = InlineKeyboardMarkup(keyboard)
